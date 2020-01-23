@@ -27,7 +27,7 @@ Docker image for compiling and running xv6 in a container.
 
 * Debug mode (not actually tested yet, pretty sure it won't work)
 
-    `./xv6-container debug`
+    `./xv6-container gdb`
 
 
 ### Troubleshooting
