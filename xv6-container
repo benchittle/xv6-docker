@@ -2,16 +2,16 @@
 
 case $1 in
     bash)
-        docker run --rm -it -v $(realpath xv6):/home/xv6user/xv6 xv6env
+        docker run --rm -it -v $(realpath xv6-public):/home/xv6user/xv6-public xv6env
         ;;
     gdb)
-        docker run --rm -it -v $(realpath xv6):/home/xv6user/xv6 xv6env make qemu-nox-gdb
+        docker run --rm -it -v $(realpath xv6-public):/home/xv6user/xv6-public xv6env make qemu-nox-gdb
         ;;
     build)
         docker build . -t xv6env
         ;;
     *)
-        docker run --rm -it -v $(realpath xv6):/home/xv6user/xv6 xv6env make qemu-nox
+        docker run --rm -it -v $(realpath xv6-public):/home/xv6user/xv6-public xv6env make qemu-nox
         ;;
 esac
 

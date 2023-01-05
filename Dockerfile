@@ -9,9 +9,9 @@ RUN set -x && \
         gcc-multilib \
         gdb-multiarch \
         tmux \
-        qemu
+        qemu-system
 
 RUN adduser xv6user
 USER xv6user
-WORKDIR /home/xv6user/xv6/
+WORKDIR /home/xv6user/xv6-public/
 CMD ["/bin/bash"]
